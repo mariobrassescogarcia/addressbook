@@ -1,0 +1,16 @@
+<h1>Your current favorite contacts are:</h1>
+
+<ol>
+
+	<%@favorite_contacts.each do |contact|%>
+	<li>  
+		<%=link_to contact.name, controller: "contacts", action: "show", id: contact.id  %>
+	</li>
+
+	<%end%>
+
+
+</ol>
+
+
+<%=link_to "Add contact", "/new" %>

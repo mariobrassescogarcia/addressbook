@@ -12,13 +12,18 @@ class ContactsController < ApplicationController
 		@new_contact_phonenumber = params[:contact][:phonenumber]
 		@new_contact_address = params[:contact][:address]
 		@new_contact_email = params[:contact][:email]
+		@new_contact_favorite = params[:contact][:favorite]
+			if @new_contact_favorite != true
+				@new_contact_favorite == false
+			end
 
 		if @new_contact_name.match(/[[:word:]]/) && @new_contact_phonenumber.match(/[[:digit:]]/) && @new_contact_address.match(/[[:alpha:]]/) && @new_contact_email.match(/([a-z\d_-]+)@([a-z\d_-]+)\.[a-z]{2,4}/)
 			@contact = Contact.create(
 				:name => @new_contact_name,
 				:phonenumber => @new_contact_phonenumber,
 				:address => @new_contact_address,
-				:email => @new_contact_email
+				:email => @new_contact_email,
+				:favorite => @new_contact_favorite
 				)
 			redirect_to("/")
 
@@ -36,5 +41,8 @@ class ContactsController < ApplicationController
 	def fail
 	end
 
+	def favorites
+		@favorite_contacts = Contact.where(favorite: true).order(name: :asc)
+	end
 
 end

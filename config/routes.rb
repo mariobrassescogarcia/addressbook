@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   post "/change_favorite" => "contacts#change_favorite"
 
+  post "/filter" => "contacts#filter"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

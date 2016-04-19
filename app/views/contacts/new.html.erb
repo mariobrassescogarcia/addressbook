@@ -18,8 +18,9 @@
 			<input id="contact_email" type="text" name="contact[email]" placeholder="Email">
 		</div>
 		<div>
-			<label for="contact_favorite"></label>
-			<input id="contact_favorite" type="checkbox" name="contact[favorite]" value="true">
+			<label for="contact_favorite">
+			<input id="contact_favorite" type="checkbox" name="contact[favorite]" value="true">Mark as favourite
+			</label>
 		</div>
 		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
 		<button type="submit">Create contact</button>

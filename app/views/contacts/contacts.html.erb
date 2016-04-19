@@ -14,8 +14,17 @@
 
 	<%end%>
 
-
 </ol>
+
+
+
+<form action="/filter" method="post">
+	<input type="text" name="contact[first_letter_searched]" placeholder="Search contacts by their first letter">
+	<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+	<button type="submit">FILTER</button>
+</form>
+
+
 
 
 <%=link_to "Add contact", "/new" %>

@@ -52,4 +52,10 @@ class ContactsController < ApplicationController
 		redirect_to("/")
 	end
 
+	def filter
+		@searched_first_letter = params[:contact][:first_letter_searched].upcase
+		@filtered_contacts = Contact.where("name LIKE '#{@searched_first_letter}%'")
+
+	end
+
 end

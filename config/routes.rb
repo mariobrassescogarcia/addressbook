@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get "/show" => "contacts#show"
 
+  get "/fail" => "contacts#fail"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

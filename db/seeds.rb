@@ -13,3 +13,4 @@ Contact.create(name: "Rolo", phonenumber: "12423432", address: "Rambla del Brasi
 Contact.create(name: "Mireia", phonenumber: "8098724", address: "Diagonal 100", email: "mireia@gmail.com", favorite: false)
 Contact.create(name: "Claudia", phonenumber: "312425", address: "Diagonal 284", email: "claudia@gmail.com", favorite: false)
 Contact.create(name: "Paula", phonenumber: "251526", address: "Via Layetana 123", email: "paula@gmail.com", favorite: false)
+

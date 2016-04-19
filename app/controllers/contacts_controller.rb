@@ -45,4 +45,11 @@ class ContactsController < ApplicationController
 		@favorite_contacts = Contact.where(favorite: true).order(name: :asc)
 	end
 
+	def change_favorite
+		@changed_contact_id = params[:id2]
+		@changed_contact_favorite = params[:favorite]
+		Contact.find_by(id: @changed_contact_id).update(favorite: @changed_contact_favorite)
+		redirect_to("/")
+	end
+
 end

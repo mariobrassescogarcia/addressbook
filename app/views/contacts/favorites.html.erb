@@ -5,6 +5,11 @@
 	<%@favorite_contacts.each do |contact|%>
 	<li>  
 		<%=link_to contact.name, controller: "contacts", action: "show", id: contact.id  %>
+		<%if contact.favorite == true %>
+			<%=button_to "UNFAV", controller: "contacts", action: "change_favorite", id2: contact.id, favorite:false %>
+		<% else %>
+			<%=button_to "FAV", controller: "contacts", action: "change_favorite", id2: contact.id, favorite:true %>
+		<%end%>
 	</li>
 
 	<%end%>

@@ -1,0 +1,16 @@
+<h1>Your current contacts are:</h1>
+
+<ul>
+
+	<%@contacts.each do |contact|%>
+	<li>
+		<%=contact.name%>.    
+		Address: <%=contact.address%> ,
+		Phone: <%=contact.phonenumber%> ,
+		Email: <%=contact.email%> ,
+	</li>
+
+	<%end%>
+
+
+</ul>

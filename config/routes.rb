@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  get "/" => "contacts#show"
+  get "/" => "contacts#contacts"
   get "/new" => "contacts#new"
 
   post "/add" => "contacts#add"
+
+  get "/show" => "contacts#show"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-	def show
+	def contacts
 		@contacts = Contact.all
 		@sorted_contacts = Contact.order(name: :asc)
 	end
@@ -15,5 +15,11 @@ class ContactsController < ApplicationController
 			:email => params[:contact][:email]
 			)
 		redirect_to("/")
+	end
+
+
+	def show
+		@requested_contact_id = params[:id]
+		@requested_contact = Contact.find_by(id: @requested_contact_id)
 	end
 end

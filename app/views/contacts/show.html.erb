@@ -1,19 +1,4 @@
-<h1>Your current contacts are:</h1>
-
-<ol>
-
-	<%@sorted_contacts.each do |contact|%>
-	<li>
-		<%=contact.name%>.    
-		Address: <%=contact.address%> ,
-		Phone: <%=contact.phonenumber%> ,
-		Email: <%=contact.email%> ,
-	</li>
-
-	<%end%>
-
-
-</ol>
-
-
-<%=link_to "Add contact", "/new" %>
+<h1>Information about <%=@requested_contact.name%>:</h1>
+	<p>Email: <%=@requested_contact.email%></p>
+	<p>Phone number: <%=@requested_contact.phonenumber%></p>
+	<p>Address: <%=@requested_contact.address%></p>

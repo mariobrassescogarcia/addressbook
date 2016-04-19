@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
 	def show
 		@contacts = Contact.all
+		@sorted_contacts = Contact.order(name: :asc)
 	end
 
 	def new

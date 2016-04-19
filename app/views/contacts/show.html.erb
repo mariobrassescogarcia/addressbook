@@ -1,8 +1,8 @@
 <h1>Your current contacts are:</h1>
 
-<ul>
+<ol>
 
-	<%@contacts.each do |contact|%>
+	<%@sorted_contacts.each do |contact|%>
 	<li>
 		<%=contact.name%>.    
 		Address: <%=contact.address%> ,
@@ -13,7 +13,7 @@
 	<%end%>
 
 
-</ul>
+</ol>
 
 
 <%=link_to "Add contact", "/new" %>
